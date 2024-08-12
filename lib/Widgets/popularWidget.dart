@@ -275,12 +275,12 @@ class PopularItemsWidget extends StatelessWidget {
                 child: Column(
                   children: [
                     Container(
-                      child: Image.asset("assets/chips.jpg",
+                      child: Image.asset("assets/no_bg/burger.png",
                         height: 100,
                       ),
                     ),
                     Text(
-                      "Hot Chips",
+                      "Burger",
                       style: TextStyle(
                         fontSize: 16,
                         fontWeight: FontWeight.bold,
@@ -288,7 +288,7 @@ class PopularItemsWidget extends StatelessWidget {
                     ),
                     SizedBox(height: 4),
                     Text(
-                      "Test Our Hot Chipps Now!",
+                      "Test Our Hot Burger Now!",
                       style: TextStyle(
                         fontSize: 12,
                         // fontWeight: FontWeight.bold,
@@ -395,12 +395,12 @@ class PopularItemsWidget extends StatelessWidget {
                 child: Column(
                   children: [
                     Container(
-                      child: Image.asset("assets/chips.jpg",
+                      child: Image.asset("assets/no_bg/fries1-remove-preview.png",
                         height: 100,
                       ),
                     ),
                     Text(
-                      "Hot Chips",
+                      "Nasty Fries",
                       style: TextStyle(
                         fontSize: 16,
                         fontWeight: FontWeight.bold,
@@ -408,7 +408,7 @@ class PopularItemsWidget extends StatelessWidget {
                     ),
                     SizedBox(height: 4),
                     Text(
-                      "Test Our Hot Chipps Now!",
+                      "Test Our Hot Fries Now!",
                       style: TextStyle(
                         fontSize: 12,
                         // fontWeight: FontWeight.bold,
