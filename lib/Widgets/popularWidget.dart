@@ -275,7 +275,7 @@ class PopularItemsWidget extends StatelessWidget {
                 child: Column(
                   children: [
                     Container(
-                      child: Image.asset("assets/no_bg/burger.png",
+                      child: Image.asset("assets/no_bg/fries1-removebg-preview.png",
                         height: 100,
                       ),
                     ),
@@ -395,7 +395,7 @@ class PopularItemsWidget extends StatelessWidget {
                 child: Column(
                   children: [
                     Container(
-                      child: Image.asset("assets/no_bg/fries1-remove-preview.png",
+                      child: Image.asset("assets/no_bg/fries1-removebg-preview.png",
                         height: 100,
                       ),
                     ),
