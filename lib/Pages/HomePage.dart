@@ -4,6 +4,7 @@ import '../Widgets/app_bar.dart';
 import '../Widgets/categoryWidget.dart';
 import '../Widgets/popularWidget.dart';
 import '../Widgets/NewestItemsWidget.dart';
+import '../Widgets/DrawerWidget.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -12,12 +13,12 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: ListView(
-          children: [
-            const AppBarWidget(),
+        children: [
+          const AppBarWidget(),
 
-
-            // search
-            Padding(padding: const EdgeInsets.symmetric(
+          // search
+          Padding(
+            padding: const EdgeInsets.symmetric(
               vertical: 10,
               horizontal: 15,
             ),
@@ -25,33 +26,33 @@ class HomePage extends StatelessWidget {
               width: double.infinity,
               height: 50,
               decoration: BoxDecoration(
-                color: Colors.white,
-                borderRadius: BorderRadius.circular(20),
-                boxShadow: [
-                  BoxShadow(
-                    color: Colors.grey.withOpacity(0.5),
-                    spreadRadius: 2,
-                    blurRadius: 10,
-                    offset: const Offset(0, 3),
-
-                  ),
-                ]
-              ),
-              child: Padding(padding: const EdgeInsets.symmetric(
-                horizontal: 12,
-              ),
-                child:  Row(
+                  color: Colors.white,
+                  borderRadius: BorderRadius.circular(20),
+                  boxShadow: [
+                    BoxShadow(
+                      color: Colors.grey.withOpacity(0.5),
+                      spreadRadius: 2,
+                      blurRadius: 10,
+                      offset: const Offset(0, 3),
+                    ),
+                  ]),
+              child: Padding(
+                padding: const EdgeInsets.symmetric(
+                  horizontal: 12,
+                ),
+                child: Row(
                   children: [
                     const Icon(
                       CupertinoIcons.search,
                       color: Colors.red,
                     ),
-                   SizedBox(
+                    SizedBox(
                       height: 50,
                       width: 300,
-                      child: Padding(padding: const EdgeInsets.symmetric(
-                        horizontal: 15,
-                      ),
+                      child: Padding(
+                        padding: const EdgeInsets.symmetric(
+                          horizontal: 15,
+                        ),
                         child: TextFormField(
                           decoration: const InputDecoration(
                             hintText: "What would you like to have",
@@ -64,42 +65,71 @@ class HomePage extends StatelessWidget {
                   ],
                 ),
               ),
-            ),),
-            // category
-            const Padding(padding: EdgeInsets.only(top: 20, left: 10),
-              child: Text('Categories',
+            ),
+          ),
+          // category
+          const Padding(
+            padding: EdgeInsets.only(top: 20, left: 10),
+            child: Text(
+              'Categories',
               style: TextStyle(
                 fontWeight: FontWeight.bold,
                 fontSize: 20,
-              ),),
+              ),
             ),
-            // Category widget
-            CategorWidget(),
-            //Popular
+          ),
+          // Category widget
+          CategorWidget(),
+          //Popular
 
-            const Padding(padding: EdgeInsets.only(top: 20, left: 10),
-              child: Text('Popular',
-                style: TextStyle(
-                  fontWeight: FontWeight.bold,
-                  fontSize: 20,
-                ),),
+          const Padding(
+            padding: EdgeInsets.only(top: 20, left: 10),
+            child: Text(
+              'Popular',
+              style: TextStyle(
+                fontWeight: FontWeight.bold,
+                fontSize: 20,
+              ),
             ),
-            //popular widget
-            PopularItemsWidget(),
+          ),
+          //popular widget
+          PopularItemsWidget(),
 // new items
 
-            const Padding(padding: EdgeInsets.only(top: 20, left: 10),
-              child: Text('Popular',
-                style: TextStyle(
-                  fontWeight: FontWeight.bold,
-                  fontSize: 20,
-                ),),
+          const Padding(
+            padding: EdgeInsets.only(top: 20, left: 10),
+            child: Text(
+              'Popular',
+              style: TextStyle(
+                fontWeight: FontWeight.bold,
+                fontSize: 20,
+              ),
             ),
-            //new items widget
-            NewestItemsWidget(),
-
-
-          ],
+          ),
+          //new items widget
+          NewestItemsWidget(),
+        ],
+      ),
+      //drawer
+      drawer: DrawerWidget(),
+      floatingActionButton: Container(
+        decoration:
+            BoxDecoration(borderRadius: BorderRadius.circular(30), boxShadow: [
+          BoxShadow(
+            color: Colors.grey.withOpacity(0.5),
+            spreadRadius: 2,
+            blurRadius: 10,
+            offset: Offset(0, 3),
+          )
+        ]),
+        child: FloatingActionButton(
+          onPressed: () {},
+          child: Icon(
+            CupertinoIcons.cart,
+            size: 28,
+            color: Colors.red,
+          ),
+        ),
       ),
     );
   }

@@ -112,7 +112,7 @@ class CategorWidget extends StatelessWidget {
                     ]
                 ),
                 child: Image.asset(
-                  "assets/img1.jpg",
+                  "assets/no_bg/burger.png",
                   width: 50,
                   height: 50,// Increased width for better visibility
                 ),
@@ -138,7 +138,7 @@ class CategorWidget extends StatelessWidget {
                     ]
                 ),
                 child: Image.asset(
-                  "assets/img3.jpg",
+                  "assets/no_bg/chicken2-removebg-preview.png",
                   width: 50,
                   height: 50,
                 ),

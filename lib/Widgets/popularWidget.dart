@@ -35,7 +35,7 @@ class PopularItemsWidget extends StatelessWidget {
               child: Column(
                 children: [
                   Container(
-                    child: Image.asset("assets/chocolate.jpg",
+                    child: Image.asset("assets/no_bg/chocolate_bar-removebg-preview.png",
                     height: 100,
                     ),
                   ),
